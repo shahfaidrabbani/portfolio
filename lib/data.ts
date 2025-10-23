@@ -1,10 +1,10 @@
 export const personalInfo = {
   name: "Shahfaid Rabbani",
-  title: "Frontend Developer | Angular | TypeScript | NgRx",
+  title: "Software Developer | Angular | TypeScript | NgRx",
   email: "shahfaidrabbani@gmail.com",
   phone: "+91 9756903692",
   location: "Noida, India",
-  description: "Passionate Frontend Developer with expertise in Angular, TypeScript, and modern web technologies. Currently working at Standard Chartered, building scalable and performant web applications.",
+  description: "Passionate Software Developer with expertise in Angular, TypeScript, and modern web technologies. Currently working at Standard Chartered, building scalable and performant web applications.",
   links: {
     linkedin: "https://in.linkedin.com/in/shahfaid-rabbani-94696b229",
     github: "https://github.com/shahfaidrabbani/",
@@ -29,27 +29,28 @@ export const education = [
 
 export const experience = [
   {
-    company: "Standard Chartered (SOLV)",
-    position: "Specialist Frontend",
+    company: "Standard Chartered Research and Technology India Private Limited (SOLV)",
+    position: "Software Developer",
     duration: "Aug 2024 – Present",
     location: "Noida, India",
     achievements: [
-      "Led frontend revamp of intra-city seller portal, improving user experience and performance",
-      "Developed an internal component library using Angular and published it on AWS CodeArtifact for reusability across teams",
-      "Built a backend-driven dynamic filtering system, reducing page load by 60%",
-      "Implemented NgRx state management for efficient data flow and application scalability",
-      "Achieved 80%+ test coverage using Jasmine and Karma, ensuring code reliability"
+      "Led end-to-end frontend revamp of the intra-city seller portal using Angular, TypeScript, RxJS, Angular Material, improving UI performance, accessibility, and seller workflow efficiency",
+      "Designed and maintained an internal Angular component library with reusable UI modules, integrated via AWS CodeArtifact, enabling consistent frontend standards across multiple teams",
+      "Implemented a dynamic filtering and sorting system across 17+ order buckets using lazy loading, pagination, and backend-driven data flows, reducing API/database load by 60%",
+      "Developed a Sales Officer dashboard leveraging Angular and charting libraries to analyze logistics inefficiencies using volumetric weight and vendor performance metrics, supporting data-driven decisions and cost optimization",
+      "Applied NgRx for global state management and RxJS observables for reactive UI updates, improving maintainability, scalability, and debugging of complex workflows",
+      "Ensured high-quality production releases with 90%+ unit test coverage using Jasmine, Karma, and implemented component-level integration testing for critical flows"
     ]
   },
   {
-    company: "Standard Chartered (SOLV)",
+    company: "Standard Chartered Research and Technology India Private Limited (SOLV)",
     position: "Graduate Engineer Trainee",
     duration: "Feb 2024 – Aug 2024",
     location: "Noida, India",
     achievements: [
-      "Revamped the seller portal using Angular, TypeScript, and Angular Material",
-      "Optimized API integration, reducing render time by 50%",
-      "Built dynamic catalog module with advanced filtering and search capabilities"
+      "Revamped the seller portal with Angular, TypeScript, and Angular Material, improving responsiveness, accessibility, and UI consistency",
+      "Optimized API calls using parallel fetching, caching, and lazy loading, reducing page render time by 50%",
+      "Built a dynamic, reusable catalog module with configurable selectors and Angular Material dialogs integrated with REST APIs"
     ]
   }
 ];
@@ -79,10 +80,10 @@ export const projects = [
   {
     title: "Sorting Visualizer",
     description: "An interactive web application that visualizes various sorting algorithms in real-time. Helps users understand algorithm complexity and performance through dynamic animations.",
-    image: "/projects/sorting-visualizer.png",
+    image: "/projects/sorting-visualiser.png",
     tags: ["HTML5", "CSS3", "JavaScript", "Data Structures"],
-    liveUrl: "https://shahfaidrabbani.github.io/sorting-visualizer/",
-    githubUrl: "https://github.com/shahfaidrabbani/sorting-visualizer",
+    liveUrl: "https://shahfaidrabbani.github.io/sorting-visualiser/",
+    githubUrl: "https://github.com/shahfaidrabbani/sorting-visualiser",
     features: [
       "Multiple sorting algorithms",
       "Real-time visualization",
@@ -95,7 +96,7 @@ export const projects = [
 export const achievements = [
   {
     title: "Project Champion Award",
-    organization: "Standard Chartered (SOLV)",
+    organization: "Standard Chartered Research & Technology Pvt. Ltd India(SOLV)",
     description: "Recognized for outstanding contribution in frontend development and innovation",
     year: "2024"
   },

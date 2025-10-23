@@ -4,24 +4,37 @@ import { motion } from "framer-motion"
 import { Briefcase, MapPin, CheckCircle2 } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
 import { experience } from "@/lib/data"
+import { TiltCard } from "./TiltCard"
 
 export function Experience() {
   return (
     <section id="experience" className="py-20">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-5xl font-heading font-bold mb-4"
+          >
             Work Experience
-          </h2>
-          <p className="text-lg text-muted-foreground">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg text-muted-foreground"
+          >
             My professional journey and contributions
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
@@ -33,20 +46,48 @@ export function Experience() {
               {experience.map((exp, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
+                  initial={{ 
+                    opacity: 0, 
+                    x: index % 2 === 0 ? -100 : 100,
+                    rotateY: index % 2 === 0 ? -30 : 30
+                  }}
+                  whileInView={{ 
+                    opacity: 1, 
+                    x: 0,
+                    rotateY: 0
+                  }}
+                  viewport={{ once: false, margin: "-50px" }}
+                  transition={{ 
+                    duration: 0.8, 
+                    delay: 0.2 * index,
+                    ease: "easeOut"
+                  }}
                   className="relative"
                 >
                   {/* Timeline Dot */}
-                  <div className="hidden md:flex absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10 ring-4 ring-background" />
+                  <motion.div 
+                    className="hidden md:flex absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full -translate-x-1/2 z-10 ring-4 ring-background"
+                    animate={{
+                      scale: [1, 1.2, 1],
+                      boxShadow: [
+                        "0 0 0 0 rgba(59, 130, 246, 0.7)",
+                        "0 0 0 10px rgba(59, 130, 246, 0)",
+                        "0 0 0 0 rgba(59, 130, 246, 0)"
+                      ]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: index * 0.3
+                    }}
+                  />
 
-                  <Card
-                    className={`border-2 hover:border-primary/50 transition-colors ${
-                      index % 2 === 0 ? "md:mr-auto md:w-[calc(50%-2rem)]" : "md:ml-auto md:w-[calc(50%-2rem)]"
-                    }`}
-                  >
+                  <TiltCard>
+                    <Card
+                      className={`border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10 ${
+                        index % 2 === 0 ? "md:mr-auto md:w-[calc(50%-2rem)]" : "md:ml-auto md:w-[calc(50%-2rem)]"
+                      }`}
+                    >
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center space-x-3">
@@ -79,7 +120,8 @@ export function Experience() {
                         ))}
                       </ul>
                     </CardContent>
-                  </Card>
+                    </Card>
+                  </TiltCard>
                 </motion.div>
               ))}
             </div>

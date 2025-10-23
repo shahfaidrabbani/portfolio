@@ -1,6 +1,6 @@
 # 🚀 Shahfaid Rabbani - Premium Portfolio Website
 
-A modern, premium personal portfolio website built with Next.js, TypeScript, TailwindCSS, and Framer Motion. Showcasing expertise as a Frontend Developer with Angular, TypeScript, and modern web technologies.
+A modern, premium personal portfolio website built with Next.js, TypeScript, TailwindCSS, and Framer Motion. Showcasing expertise as a Software Developer with Angular, TypeScript, and modern web technologies.
 
 ## ✨ Features
 
@@ -121,7 +121,7 @@ Edit `lib/data.ts` to update your personal information:
 ```typescript
 export const personalInfo = {
   name: "Shahfaid Rabbani",
-  title: "Frontend Developer | Angular | TypeScript | NgRx",
+  title: "Software Developer | Angular | TypeScript | NgRx",
   email: "shahfaidrabbani@gmail.com",
   phone: "+91 9756903692",
   location: "Noida, India",
@@ -179,17 +179,18 @@ The portfolio is built based on this resume structure:
 - Jamia Senior Secondary School (84%)
 
 **Experience**
-- **Standard Chartered (SOLV)** - Specialist Frontend (Aug 2024 – Present)
-  - Led frontend revamp of intra-city seller portal
-  - Developed internal component library with Angular & AWS CodeArtifact
-  - Built backend-driven dynamic filtering system (60% load reduction)
-  - Implemented NgRx state management
-  - Achieved 80%+ test coverage
+- **Standard Chartered Research and Technology India Private Limited (SOLV)** - Software Developer (Aug 2024 – Present)
+  - Led end-to-end frontend revamp of the intra-city seller portal using Angular, TypeScript, RxJS, Angular Material
+  - Designed and maintained internal Angular component library integrated via AWS CodeArtifact
+  - Implemented dynamic filtering and sorting system across 17+ order buckets (60% load reduction)
+  - Developed Sales Officer dashboard with charting libraries for logistics analysis
+  - Applied NgRx for global state management and RxJS observables for reactive UI updates
+  - Achieved 90%+ unit test coverage using Jasmine and Karma
 
-- **Standard Chartered (SOLV)** - Graduate Engineer Trainee (Feb 2024 – Aug 2024)
-  - Revamped seller portal with Angular
-  - Optimized API performance (50% faster render time)
-  - Built dynamic catalog module
+- **Standard Chartered Research and Technology India Private Limited (SOLV)** - Graduate Engineer Trainee (Feb 2024 – Aug 2024)
+  - Revamped seller portal with Angular, TypeScript, and Angular Material
+  - Optimized API calls using parallel fetching, caching, and lazy loading (50% faster render time)
+  - Built dynamic, reusable catalog module with REST API integration
 
 **Technical Skills**
 - Languages: TypeScript, JavaScript, C++, SQL, HTML5, CSS3
@@ -202,7 +203,7 @@ The portfolio is built based on this resume structure:
 2. Sorting Visualizer - HTML, CSS, JavaScript
 
 **Achievements**
-- Project Champion Award at Standard Chartered (SOLV)
+- Project Champion Award at Standard Chartered Research & Technology Pvt. Ltd India(SOLV)
 - 400+ problems solved on LeetCode (Top 10%, Rating: 1747)
 
 ## 🚀 Deployment
@@ -299,12 +300,12 @@ Located in `app/layout.tsx`:
 
 ```typescript
 export const metadata = {
-  title: 'Shahfaid Rabbani | Frontend Developer',
-  description: 'Frontend Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.',
-  keywords: ['Frontend Developer', 'Angular', 'TypeScript', 'NgRx', 'Web Development'],
+  title: 'Shahfaid Rabbani | Software Developer',
+  description: 'Software Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.',
+  keywords: ['Software Developer', 'Frontend Developer', 'Angular', 'TypeScript', 'NgRx', 'Web Development'],
   openGraph: {
-    title: 'Shahfaid Rabbani | Frontend Developer',
-    description: 'Frontend Developer specializing in Angular, TypeScript, NgRx',
+    title: 'Shahfaid Rabbani | Software Developer',
+    description: 'Software Developer specializing in Angular, TypeScript, NgRx',
     url: 'https://shahfaidrabbani.com',
     type: 'website',
   },

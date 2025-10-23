@@ -17,10 +17,11 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: "Shahfaid Rabbani | Frontend Developer",
+  title: "Shahfaid Rabbani | Software Developer",
   description:
-    "Frontend Developer specializing in Angular, TypeScript, NgRx, and modern web technologies. Currently working at Standard Chartered (SOLV).",
+    "Software Developer specializing in Angular, TypeScript, NgRx, and modern web technologies. Currently working at Standard Chartered Research & Technology Pvt. Ltd India(SOLV).",
   keywords: [
+    "Software Developer",
     "Frontend Developer",
     "Angular",
     "TypeScript",
@@ -37,16 +38,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://shahfaidrabbani.com",
-    title: "Shahfaid Rabbani | Frontend Developer",
+    title: "Shahfaid Rabbani | Software Developer",
     description:
-      "Frontend Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.",
+      "Software Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.",
     siteName: "Shahfaid Rabbani Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shahfaid Rabbani | Frontend Developer",
+    title: "Shahfaid Rabbani | Software Developer",
     description:
-      "Frontend Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.",
+      "Software Developer specializing in Angular, TypeScript, NgRx, and modern web technologies.",
   },
   robots: {
     index: true,
@@ -61,6 +62,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (history.scrollRestoration) {
+                history.scrollRestoration = 'manual';
+              }
+              window.scrollTo(0, 0);
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"

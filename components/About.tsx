@@ -4,37 +4,51 @@ import { motion } from "framer-motion"
 import { GraduationCap, Award } from "lucide-react"
 import { Card, CardContent } from "./ui/card"
 import { education, achievements } from "@/lib/data"
+import { TiltCard } from "./TiltCard"
 
 export function About() {
   return (
     <section id="about" className="py-20 bg-accent/50">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: false, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+          <motion.h2 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-4xl md:text-5xl font-heading font-bold mb-4"
+          >
             About Me
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-lg text-muted-foreground max-w-3xl mx-auto"
+          >
             A passionate software engineer dedicated to creating elegant solutions
             to complex problems. I specialize in frontend development with a strong
             focus on user experience and performance.
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Education */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >
-            <Card className="h-full border-2 hover:border-primary/50 transition-colors">
+            <TiltCard>
+              <Card className="h-full border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-2 mb-6">
                   <GraduationCap className="h-6 w-6 text-primary" />
@@ -64,17 +78,19 @@ export function About() {
                   ))}
                 </div>
               </CardContent>
-            </Card>
+              </Card>
+            </TiltCard>
           </motion.div>
 
           {/* Achievements */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: false, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
           >
-            <Card className="h-full border-2 hover:border-primary/50 transition-colors">
+            <TiltCard>
+              <Card className="h-full border-2 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-2 mb-6">
                   <Award className="h-6 w-6 text-primary" />
@@ -104,7 +120,8 @@ export function About() {
                   ))}
                 </div>
               </CardContent>
-            </Card>
+              </Card>
+            </TiltCard>
           </motion.div>
         </div>
       </div>
